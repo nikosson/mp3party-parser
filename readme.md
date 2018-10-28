@@ -5,9 +5,9 @@
   * ```composer install```
   * ```cp .env.example .env```
   * ```php artisan key:generate```
+  * Сконфигурируйте настройки базы в ```.env``` файле
   * ```php artisan migrate```
   * ```php artisan storage:link```
-  * Сконфигурируйте настройки базы в .env файле
  
 ## Консольные команды
 Спарсить сайт http://m3party.net и записать необходимую информацию в базу.
