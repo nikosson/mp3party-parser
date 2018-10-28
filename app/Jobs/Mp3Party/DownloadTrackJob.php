@@ -26,6 +26,7 @@ class DownloadTrackJob implements ShouldQueue
      * @var Track
      */
     private $track;
+
     /**
      * @var Filesystem
      */

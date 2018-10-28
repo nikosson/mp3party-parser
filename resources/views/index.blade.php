@@ -9,7 +9,7 @@
 
         <div class="jumbotron">
             <h1 class="display-4">Артисты</h1>
-            <p class="lead">Hа этой странице вы можете увидеть всех доступных артистов. Нажмите на ссылку чтобы увидеть их треки</p>
+            <p class="lead">Hа этой странице вы можете увидеть всех доступных артистов. Нажмите на ссылку, чтобы увидеть их треки</p>
 
             <ul class="list-group">
 
@@ -20,7 +20,7 @@
                                 {{ $key + 1}} {{ $artist->name }}
                             </a>
                             @if (!$artist->downloadedTracks->count())
-                                <span class="badge badge-warning">У этого артиста нету загруженых треков</span>
+                                <span class="badge badge-warning">У этого артиста нет загруженных треков</span>
                             @endif
                         </li>
                     @endforeach

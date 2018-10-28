@@ -22,7 +22,7 @@
                     @endforeach
                 @else
                     <div class="alert alert-primary" role="alert">
-                        Похоже, что у этого артиста нету загруженых треков :(
+                        Похоже, что у этого артиста нет загруженных треков :(
                     </div>
                 @endif
             </ul>
