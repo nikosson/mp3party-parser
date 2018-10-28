@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * @property $id
  * @property $name
- * @property $track_id
+ * @property $original_id
  * @property $src_path
  * @property $storage_path
  * @property $artist_id
@@ -21,7 +21,7 @@ class Track extends Model
      */
     protected $fillable = [
         'name',
-        'track_id',
+        'original_id',
         'src_path',
         'storage_path',
         'artist_id'

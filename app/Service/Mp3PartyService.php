@@ -29,11 +29,11 @@ class Mp3PartyService
         $tracks = $this->mp3PartyParser->parseArtistsTracks($artistId);
 
         return DB::transaction(function () use ($tracks, $artistId) {
-            $artist = Artist::where('artist_id', $artistId)->first();
+            $artist = Artist::where('original_id', $artistId)->first();
 
             if (!isset($artist)) {
                 $artist = Artist::create([
-                    'artist_id' => $artistId,
+                    'original_id' => $artistId,
                     'name' => $tracks[0]->artist
                 ]);
             }
@@ -52,13 +52,13 @@ class Mp3PartyService
         $newTracks = [];
 
         foreach ($tracks as $track) {
-            $trackExists = TrackModel::where('track_id', $track->trackId)
+            $trackExists = TrackModel::where('original_id', $track->trackId)
                 ->exists();
 
             if (!$trackExists && isset($track->sourcePath)) {
                 $newTracks[] = TrackModel::create([
                     'name' => $track->name,
-                    'track_id' => $track->trackId,
+                    'original_id' => $track->trackId,
                     'src_path' => $track->sourcePath,
                     'artist_id' => $artistId
                 ]);

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property $id
- * @property $artist_id
+ * @property $original_id
  * @property $name
  */
 class Artist extends Model
@@ -16,7 +16,7 @@ class Artist extends Model
      * @var array
      */
     protected $fillable = [
-        'artist_id',
+        'original_id',
         'name'
     ];
 

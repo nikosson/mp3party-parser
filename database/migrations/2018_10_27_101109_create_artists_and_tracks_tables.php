@@ -15,14 +15,14 @@ class CreateArtistsAndTracksTables extends Migration
     {
         Schema::create('artists', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('artist_id')->unique()->index();
+            $table->integer('original_id')->unique()->index();
             $table->string('name');
             $table->timestamps();
         });
 
         Schema::create('tracks', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('track_id')->unique()->index();
+            $table->integer('original_id')->unique()->index();
             $table->string('name');
             $table->text('src_path');
             $table->string('storage_path')->nullable();

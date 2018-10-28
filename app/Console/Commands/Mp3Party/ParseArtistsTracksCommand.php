@@ -71,11 +71,11 @@ class ParseArtistsTracksCommand extends Command
     private function getTestArtistsIds(): array
     {
         return [
-            1275, //Muse
-            1233, //Blur
-            4488, //Swedish House Mafia
-            1361, //The Prodigy
-            2150  //Daft Punk
+            8795,   //Foals
+            1233,   //Blur
+            924464, //Queens of the Stone Age
+            36490,  //The Hives
+            2150    //Daft Punk
         ];
     }
 }
